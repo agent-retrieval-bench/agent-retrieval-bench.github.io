@@ -1,5 +1,5 @@
-# Agent Retrieval Bench Pages
+# Agent Retrieval Bench Project Site
 
-Static GitHub Pages site for Agent Retrieval Bench V1.
+Static GitHub Pages site for Agent Retrieval Bench.
 
 Canonical site: https://agent-retrieval-bench.github.io/
