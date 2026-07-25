@@ -460,7 +460,7 @@
       <div class="wrap">
         <div class="section-kicker">Download</div>
         <h2>Each subset ships with its matching frozen corpus.</h2>
-        <p class="section-copy">Use explicit release identifiers to fetch only the benchmark and repository snapshots needed for a given track.</p>
+        <p class="section-copy">Inspect the release catalog, download one subset or all five current tracks, then merge their corpus manifests when running selective evaluation.</p>
         <div class="download-grid">
           <ul class="release-list" aria-label="Release identifiers">
             <li><code>v2_code2test</code><span>106</span></li>
@@ -469,15 +469,18 @@
             <li><code>v2_edit2ripple</code><span>58</span></li>
             <li><code>v2_abstention</code><span>82</span></li>
           </ul>
-          <pre><span class="comment"># Install the evaluation CLI</span>
+          <pre><span class="comment"># Install and inspect the evaluation CLI</span>
 pip install -e .
+arb releases
 
-<span class="comment"># Download one benchmark subset and its corpus</span>
+<span class="comment"># Download all five benchmark subsets and their corpora</span>
 arb download-benchmark \
-  --version v2_edit2ripple \
-  --repo-id eyuansu71/agent_retrieval_bench \
+  --all \
   --local-dir data \
-  --force</pre>
+  --force
+
+<span class="comment"># Deduplicate corpus snapshots for selective evaluation</span>
+arb merge-corpus-manifests --local-dir data</pre>
         </div>
       </div>
     </section>
